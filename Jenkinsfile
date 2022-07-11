@@ -2,8 +2,8 @@
 
 node {
 
-    def SF_CONSUMER_KEY=env.SF_CONSUMER_KEY
-    def SF_USERNAME=env.SF_USERNAME
+    def SF_CONSUMER_KEY=env.SF_CONSUMER_KEY_CQDEV
+    def SF_USERNAME=env.SF_USERNAME_CQDEV
     def SERVER_KEY_CREDENTALS_ID=env.SERVER_KEY_CREDENTALS_ID
     def TEST_LEVEL='RunLocalTests'
     def SF_INSTANCE_URL = env.SF_INSTANCE_URL ?: "https://login.salesforce.com"
@@ -14,7 +14,7 @@ node {
     println 'keyname'	
     println SF_USERNAME
     println SF_CONSUMER_KEY
-    println SERVER_KEY_CREDENTIALS_ID
+    // println SERVER_KEY_CREDENTIALS_ID
 	println SF_INSTANCE_URL
 
     // -------------------------------------------------------------------------
@@ -39,7 +39,15 @@ node {
 		// Authenticate to Salesforce using the server key.
 		// -------------------------------------------------------------------------
 
-            stage('Authorize DevHub') {
+/**
+ *            stage('Authorize DevHub') {
+                rc = command "${toolbelt}sfdx auth:jwt:grant --instanceurl ${SF_INSTANCE_URL} --clientid ${SF_CONSUMER_KEY} --username ${SF_USERNAME} --jwtkeyfile ${server_key_file} --setdefaultdevhubusername --setalias DevHub"
+                if (rc != 0) {
+                    error 'Salesforce dev hub org authorization failed.'
+                }
+            }
+ *  */ 
+             stage('Authorize DevHub') {
                 rc = command "${toolbelt}sfdx auth:jwt:grant --instanceurl ${SF_INSTANCE_URL} --clientid ${SF_CONSUMER_KEY} --username ${SF_USERNAME} --jwtkeyfile ${server_key_file} --setdefaultdevhubusername --setalias DevHub"
                 if (rc != 0) {
                     error 'Salesforce dev hub org authorization failed.'
@@ -51,7 +59,7 @@ node {
 		// -------------------------------------------------------------------------
 
 		stage('Deploy and Run Tests') {
-		    rc = command "${toolbelt}sfdx force:mdapi:deploy --wait 10 --deploydir ${DEPLOYDIR} --targetusername UAT --testlevel ${TEST_LEVEL}"
+		    rc = command "${toolbelt}sfdx force:mdapi:deploy --wait 10 --deploydir ${DEPLOYDIR} --targetusername DevHub --testlevel ${TEST_LEVEL}"
 		    if (rc != 0) {
 			error 'Salesforce deploy and test run failed.'
 		    }
@@ -63,7 +71,7 @@ node {
 		// -------------------------------------------------------------------------
 
 		stage('Check Only Deploy') {
-		    rc = command "${toolbelt}sfdx force:mdapi:deploy --checkonly --wait 10 --deploydir ${DEPLOYDIR} --targetusername UAT --testlevel ${TEST_LEVEL}"
+		    rc = command "${toolbelt}sfdx force:mdapi:deploy --checkonly --wait 10 --deploydir ${DEPLOYDIR} --targetusername DevHub --testlevel ${TEST_LEVEL}"
 		    if (rc != 0) {
 		        error 'Salesforce deploy failed.'
 		    }
