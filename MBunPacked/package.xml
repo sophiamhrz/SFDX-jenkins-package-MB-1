@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-    <types>
+   <!-- <types>
         <members>MB_Movie_Controller</members>
         <name>ApexClass</name>
-    </types>
+    </types> -->
     <types>
         <members>MB_Movie_trigger_new</members>
         <name>ApexTrigger</name>
     </types>
-    <types>
+    <!-- <types>
         <members>Booking__c.Approve_Booking</members>
         <name>ApprovalProcess</name>
-    </types>
+    </types> -->
     <types>
         <members>MB_Movie_Booking_Component</members>
         <members>MB_Movie_Booking_Form</members>
@@ -181,10 +181,10 @@
         <members>Booking__c.b4</members>
         <name>WorkflowFieldUpdate</name>
     </types>
-    <types>
+    <!-- <types>
         <members>Booking__c.SendEmailAlert</members>
         <name>WorkflowRule</name>
-    </types>
+    </types> -->
     <types>
         <members>Apex</members>
         <members>EmailTemplate</members>
