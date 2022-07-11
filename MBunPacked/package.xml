@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
-s
+   <types>
+        <members>MB_Movie_Controller</members>
+        <name>ApexClass</name>
+    </types>
     <types>
         <members>MB_Movie_trigger_new</members>
         <name>ApexTrigger</name>
@@ -23,7 +26,7 @@ s
         <members>MB_Movie_thumbnail</members>
         <members>MB_Movies_event</members>
         <!-- <members>auratestforLWC</members> -->
-        <members>movie_thumbnail</members>
+        <!-- <members>movie_thumbnail</members> -->
         <name>AuraDefinitionBundle</name>
     </types>
     <types>
@@ -61,7 +64,7 @@ s
     <types>
         <members>Booking</members>
         <members>Booking__c</members>
-        <members>Movie__c</members>
+        <!-- <members>Movie__c</members> -->
         <members>Show_Time__c</members>
         <name>CustomTab</name>
     </types>
@@ -79,8 +82,8 @@ s
     </types>
     <types>
         <members>Send_Email</members>
-        <!-- <members>Send_Email_for_booking</members>
-        <members>Send_Email_on_Booking</members> -->
+        <members>Send_Email_for_booking</members>
+        <members>Send_Email_on_Booking</members>
         <members>ShowTime</members>
         <members>send_Mail_on_Booking</members>
         <name>Flow</name>
@@ -163,11 +166,11 @@ s
         <name>Workflow</name>
     </types>
     <types>
-        <!-- <members>Booking__c.Booking_Mail</members>
+        <members>Booking__c.Booking_Mail</members>
         <members>Booking__c.FinalApprovalMail</members>
         <members>Booking__c.Reject_Booking</members>
         <members>Booking__c.Send_Email_to_the_user_entered_email</members>
-        <members>User.Booking_Mail</members> -->
+        <members>User.Booking_Mail</members>
         <name>WorkflowAlert</name>
     </types>
     <types>
