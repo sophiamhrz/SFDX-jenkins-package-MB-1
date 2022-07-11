@@ -25,7 +25,7 @@
         <members>MB_Movie_overide_ShowTimeRecordForm_LWC</members>
         <members>MB_Movie_thumbnail</members>
         <members>MB_Movies_event</members>
-        <members>auratestforLWC</members>
+        <!-- <members>auratestforLWC</members> -->
         <members>movie_thumbnail</members>
         <name>AuraDefinitionBundle</name>
     </types>
@@ -33,11 +33,11 @@
         <members>Booking__c.Booking_compact</members>
         <name>CompactLayout</name>
     </types>
-    <types>
+    <!-- <types>
         <members>Movie_Booking</members>
         <members>Movie_Booking_SU</members>
         <name>CustomApplication</name>
-    </types>
+    </types> -->
     <types>
         <members>Booking__c.Email__c</members>
         <members>Booking__c.Payment__c</members>
@@ -82,14 +82,14 @@
     </types>
     <types>
         <members>Send_Email</members>
-        <members>Send_Email_for_booking</members>
-        <members>Send_Email_on_Booking</members>
+        <!-- <members>Send_Email_for_booking</members>
+        <members>Send_Email_on_Booking</members> -->
         <members>ShowTime</members>
         <members>send_Mail_on_Booking</members>
         <name>Flow</name>
     </types>
     <types>
-        <members>Approval_Process_For_Booking</members>
+        <!-- <members>Approval_Process_For_Booking</members> -->
         <members>Send_Email</members>
         <members>Send_Email_for_booking</members>
         <members>Send_Email_on_Booking</members>
@@ -103,7 +103,7 @@
         <name>Group</name>
     </types>
     <types>
-        <members>Booking__c-New Booking Layout</members>
+        <!-- <members>Booking__c-New Booking Layout</members> -->
         <members>EmailMessage-Email Message Layout</members>
         <members>Movie__c-Movie Layout</members>
         <members>Show_Time__c-New Show Time Layout</members>
@@ -124,10 +124,10 @@
         <name>PermissionSet</name>
     </types>
     <types>
-        <members>Admin</members>
+        <!-- <members>Admin</members>
         <members>Cloned SU</members>
         <members>Cloned SU</members>
-        <members>ForJackSparrow</members>
+        <members>ForJackSparrow</members> -->
         <name>Profile</name>
     </types>
     <!-- <types>
@@ -166,19 +166,19 @@
         <name>Workflow</name>
     </types>
     <types>
-        <members>Booking__c.Booking_Mail</members>
+        <!-- <members>Booking__c.Booking_Mail</members>
         <members>Booking__c.FinalApprovalMail</members>
         <members>Booking__c.Reject_Booking</members>
         <members>Booking__c.Send_Email_to_the_user_entered_email</members>
-        <members>User.Booking_Mail</members>
+        <members>User.Booking_Mail</members> -->
         <name>WorkflowAlert</name>
     </types>
     <types>
         <members>Booking__c.Approved</members>
         <members>Booking__c.b1</members>
         <members>Booking__c.b2</members>
-        <members>Booking__c.b3</members>
-        <members>Booking__c.b4</members>
+        <!-- <members>Booking__c.b3</members>
+        <members>Booking__c.b4</members> -->
         <name>WorkflowFieldUpdate</name>
     </types>
     <!-- <types>
