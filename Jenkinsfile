@@ -7,7 +7,7 @@ node {
     def SERVER_KEY_CREDENTALS_ID=env.SERVER_KEY_CREDENTALS_ID
     def TEST_LEVEL='RunLocalTests'
     def SF_INSTANCE_URL = env.SF_INSTANCE_URL ?: "https://login.salesforce.com"
-    def DEPLOYDIR='MBunPacked'
+    def DEPLOYDIR='force-app'
     def toolbelt = tool 'toolbelt'
 
     
