@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
    <types>
-        <members>MB_Movie_Controller</members>
+        <members>MB_Movies_Controller</members>
         <name>ApexClass</name>
     </types>
     <types>
@@ -91,8 +91,8 @@
     <types>
         <!-- <members>Approval_Process_For_Booking</members> -->
         <members>Send_Email</members>
-        <members>Send_Email_for_booking</members>
-        <members>Send_Email_on_Booking</members>
+        <!-- <members>Send_Email_for_booking</members>
+        <members>Send_Email_on_Booking</members> -->
         <members>ShowTime</members>
         <members>send_Mail_on_Booking</members>
         <name>FlowDefinition</name>
